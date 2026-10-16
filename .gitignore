@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Vertual environment
+.venv/
+
+# PyInstaller build artifacts
+/build/
+/dist/
+/*.spec
+
+# Environment variables
+.env
+
+# batch files
+run.bat
