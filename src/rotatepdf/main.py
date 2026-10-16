@@ -57,4 +57,5 @@ def main() -> None:
     print("PDFの回転が完了しました。outputフォルダを確認してください。")
     pause()
 
-if __name__ == "__main__": main()
+if __name__ == "__main__":
+    main()
