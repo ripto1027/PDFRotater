@@ -13,8 +13,8 @@ def main() -> None:
         output_dir_path = "output"
 
     else:
-        input_dir_path = "C:\\Document\\.input"
-        output_dir_path = "C:\\Document\\.output"
+        input_dir_path = r"C:\Document\.input"
+        output_dir_path = r"C:\Document\.output"
 
     print("inputフォルダにあるPDFを回転させます。")
 
