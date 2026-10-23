@@ -1,7 +1,7 @@
 @echo off
 
 cd /d %~dp0
-uv run --locked pyinstaller --clean --noconfirm --onefile --name RotatePDF src\rotatepdf\main.py
+uv run --locked pyinstaller --clean --noconfirm --onefile --name PdfEditor src\pdfeditor\main.py
 
 if errorLevel 1 (
     echo ÉrÉãÉhÇ…é∏îsÇµÇ‹ÇµÇΩÅB
