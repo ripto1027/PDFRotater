@@ -1,0 +1,39 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@6
+
+      - name: Set up Python
+        run: uv python install
+
+      - name: Install dependencies
+        run: uv sync --locked
+
+      - name: Build EXE
+        run: uv run pyinstaller --clean --noconfirm --onefile --name PdfEditor src/pdfeditor/main.py
+
+      - name: Create Github Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: pwsh
+        run:
+          gh release create "${{ github.ref_name }}" `
+            "dist/PdfEditor.exe" `
+            --title "PdfEditor ${{ github.ref_name }}" `
+            --generate-notes
