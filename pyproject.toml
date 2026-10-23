@@ -1,9 +1,9 @@
 [project]
 name = "pdfeditor"
-version = "0.1.1"
+version = "0.1.2"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.15"
 dependencies = [
     "pypdf>=6.20.1",
 ]
