@@ -33,6 +33,25 @@ wheels = [
 ]
 
 [[package]]
+name = "pdfeditor"
+version = "0.1.1"
+source = { editable = "." }
+dependencies = [
+    { name = "pypdf" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "pyinstaller" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pypdf", specifier = ">=6.20.1" }]
+
+[package.metadata.requires-dev]
+dev = [{ name = "pyinstaller", specifier = ">=6.22.3" }]
+
+[[package]]
 name = "pefile"
 version = "2024.8.26"
 source = { registry = "https://pypi.org/simple" }
@@ -98,25 +117,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/85/9f/01a1a99704853cb63
 wheels = [
     { url = "https://files.pythonhosted.org/packages/de/3d/8161f7711c017e01ac9f008dfddd9410dff3674334c233bde66e7ba65bbf/pywin32_ctypes-0.2.3-py3-none-any.whl", hash = "sha256:8a1513379d709975552d202d942d9837758905c8d01eb82b8bcc30918929e7b8", size = 30756, upload-time = "2024-08-14T10:15:33.187Z" },
 ]
-
-[[package]]
-name = "pdfeditor"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "pypdf" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "pyinstaller" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "pypdf", specifier = ">=6.20.1" }]
-
-[package.metadata.requires-dev]
-dev = [{ name = "pyinstaller", specifier = ">=6.22.3" }]
 
 [[package]]
 name = "setuptools"
